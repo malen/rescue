@@ -12,11 +12,11 @@ else
     tar --exclude='*.log' -czvf $bakup_file $1
 
     # 判断文件是否超过box的250M限制
-    MAX_SIZE=$((250 * 1024 * 1024))
+    MAX_SIZE=$((240 * 1024 * 1024))
     FILE_SIZE=$(stat -c%s "$bakup_file")
     if [[ "$FILE_SIZE" > "$MAX_SIZE" ]]; then
         # 分割文件
-        split -b 250M "$bakup_file" part$2_
+        split -b 240M "$bakup_file" part$2_
         # 上传每一个分割文件
         for file in part$2_*; do
             curl -i -X POST "https://upload.box.com/api/2.0/files/content" \
