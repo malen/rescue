@@ -22,5 +22,5 @@ chmod +x backup.sh
 export accessToken=<Your AccessToken>
 
 # 目录备份，并上传到Box
-./backup.sh /wwwroot
+./backup.sh <backup_name> <backup_target_folder>
 ```
