@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ $1 -eq "-h" ] || [ $1 -eq "/?" ];then
+if [ "$1" -eq "-h" ] || [ "$1" -eq "/?" ];then
     echo "Usage: ./backup.sh <folder_path> [<backup_name>]"
 else
     # $1 为需要备份的目录(log文件除外)
