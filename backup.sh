@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo Usage: ./backup.sh <folder_path> [<backup_name>]
+echo "Usage: ./backup.sh <folder_path> [<backup_name>]"
 # $1 为需要备份的目录(log文件除外)
 tar --exclude='*.log' -czvf $2.tar.gz $1
 
